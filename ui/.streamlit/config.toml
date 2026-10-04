@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#06B6D4"          # theme.COLORS['status']['signal']
+backgroundColor = "#0B0F17"       # theme.COLORS['surface']['base']
+secondaryBackgroundColor = "#161F30"  # theme.COLORS['surface']['raised']
+textColor = "#F1F5F9"             # theme.COLORS['text']['primary']
+font = "sans serif"                        # Inter loaded via CSS @import in theme.inject_css()

@@ -1,0 +1,28 @@
+# ChronoGuard v1.0 — Consolidated, Pinned Dependencies (M4)
+#
+# Single reconciled dependency file covering M1–M4.  All versions pinned
+# to the exact releases that pass the full test suite (167 tests).
+# Re-validated via clean venv install + scripts/run_smoke_test.py.
+#
+# Any pin change must be re-verified against run_smoke_test.py.
+
+# --- M1: Live Ingestion & Static ONNX Scoring ---
+scapy==2.7.0                # Packet capture/dissection (ADR-001)
+onnxruntime==1.27.0         # ONNX inference engine
+numpy==2.5.1                # Tensor construction for ONNX input
+
+# --- M2: Drift Detection & Adaptive Retraining ---
+river==0.25.0               # ADWIN streaming drift detector
+optuna==4.9.0               # Bounded hyperparameter sweep
+lightgbm==4.7.0             # GBDT warm-start retraining (ADR-004)
+pandas==3.0.5               # Training-window extraction from SQLite
+skl2onnx==1.20.0            # Baseline sklearn ONNX export
+scikit-learn==1.9.0         # skl2onnx dependency + baseline models
+onnxmltools==1.16.0         # LightGBM Booster → ONNX export (ADR-005)
+
+# --- M3: Control Panel (Streamlit Dashboard) ---
+streamlit==1.60.0           # Dashboard framework
+plotly==6.9.0               # Plotly chart rendering
+
+# --- M4: Test Runner (dev dependency) ---
+pytest==9.1.1               # Test runner for scripts/run_smoke_test.py
