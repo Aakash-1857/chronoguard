@@ -25,10 +25,10 @@ htmlcov/
 .tox/
 .nox/
 .hypothesis/
-*.db
-*.db-shm
-*.db-wal
-*.log
+# *.db
+# *.db-shm
+# *.db-wal
+# *.log
 .DS_Store
 model.onnx
 golden_holdout.csv
